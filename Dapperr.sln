@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapperr", "Dapperr\Dapperr.csproj", "{5562D6B3-5EEE-4071-BA3D-8B4FAEAA22A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5562D6B3-5EEE-4071-BA3D-8B4FAEAA22A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5562D6B3-5EEE-4071-BA3D-8B4FAEAA22A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5562D6B3-5EEE-4071-BA3D-8B4FAEAA22A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5562D6B3-5EEE-4071-BA3D-8B4FAEAA22A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6293FB2-716C-4099-80BA-5772F3AED5A7}
+	EndGlobalSection
+EndGlobal
