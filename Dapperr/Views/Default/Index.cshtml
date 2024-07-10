@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+    @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+    <!-- END nav -->
+    @await Component.InvokeAsync("_LayoutSliderComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutRecentPropertiesComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutMostRecommendedPropertiesComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutStatisticComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutTestimonialComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutNewsletterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model Dapperr.Dtos.ProductDtos.CreateProductDto
+@{
+    ViewData["Title"] = "CreateProduct";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" asp-for="ProductName" />
+        <br />
+        <label>Ürün Stok</label>
+        <input type="text" class="form-control" asp-for="Stock" />
+        <br />
+        <label>Ürün Fiyat</label>
+        <input type="text" class="form-control" asp-for="Price" />
+        <br />
+        <label>Kategori</label>
+        <input type="text" class="form-control" asp-for="CategoryId" />
+        <br />
+        <button class="btn btn-primary">Ürünü Ekle</button>
+    </form>
+</div>
+

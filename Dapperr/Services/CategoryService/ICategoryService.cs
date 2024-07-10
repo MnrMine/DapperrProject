@@ -1,6 +1,6 @@
 ﻿using Dapperr.Dtos.CategoryDtos;
 
-namespace Dapperr.Services
+namespace Dapperr.Services.CategoryService
 {
     public interface ICategoryService
     {
