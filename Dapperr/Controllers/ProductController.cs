@@ -1,4 +1,5 @@
 ﻿using Dapperr.Dtos.ProductDtos;
+using Dapperr.Services.ProductService.ProductService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dapperr.Controllers

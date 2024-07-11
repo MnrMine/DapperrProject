@@ -1,6 +1,8 @@
 using Dapperr.Context;
 using Dapperr.Services.CategoryService;
 using Dapperr.Services.ProductService;
+using Dapperr.Services.ProductService.ProductService;
+using Dapperr.Services.SliderService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<DapperContext>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ISliderService, SliderService>();
+//builder.Services.AddScoped<IPropertyService, PropertyService>();
+//builder.Services.AddScoped<ILocationService, LocationService>();
+//builder.Services.AddScoped<IAgentService, AgentService>();
+//builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+//builder.Services.AddScoped<IPropertyTypeService, PropertyTypeService>();
+//builder.Services.AddScoped<IStatusService, StatusService>();
+//builder.Services.AddScoped<ITagService, TagService>();
 
 builder.Services.AddControllersWithViews();
 

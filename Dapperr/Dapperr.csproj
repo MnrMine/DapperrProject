@@ -25,4 +25,9 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\PropertyDto\" />
+    <Folder Include="Dtos\PropertyTypeDto\" />
+  </ItemGroup>
+
 </Project>
