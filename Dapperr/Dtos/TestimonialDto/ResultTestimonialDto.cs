@@ -1,6 +1,6 @@
 ﻿namespace Dapperr.Dtos.TestimonialDto
 {
-    public class ResultTestimoniaDto
+    public class ResultTestimonialDto
     {
         public int TestimonialId { get; set; }
         public string NameSurname { get; set; }

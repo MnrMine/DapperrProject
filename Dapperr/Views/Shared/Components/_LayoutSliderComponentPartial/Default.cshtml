@@ -2,7 +2,7 @@
 <section class="home-slider owl-carousel">
      @foreach (var item in Model)
     {
-        <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+        <div class="slider-item" style="background-image:url(@item.ImageUrl);">
             <div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-md-end align-items-center justify-content-end">
