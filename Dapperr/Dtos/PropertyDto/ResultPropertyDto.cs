@@ -22,7 +22,7 @@
 		public string LocationName { get; set; }
 		public int AgentId { get; set; }
 		public int StatusId { get; set; }
-		public string Name { get; set; }
+		public string StatusName { get; set; }
 		public string VideoUrl { get; set; }
 		
 		

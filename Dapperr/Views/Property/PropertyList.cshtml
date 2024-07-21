@@ -1,0 +1,101 @@
+﻿﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+
+@model IPagedList<Dapperr.Dtos.PropertyDto.ResultPropertyDto>
+@{
+    Layout = null;
+    string color = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+    <div class="hero-wrap" style="background-image: url('/royalestate-master/images/bg_2.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/Default/Index">Ana Sayfa</a></span></p>
+                    <h1 class="mb-3 bread">Emlaklar</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ftco-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 search-wrap">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    if (item.StatusName == "Satılık")
+                    {
+                        color = "status sale";
+                    }
+                    if (item.StatusName == "Kiralık")
+                    {
+                        color = "status rent";
+                    }
+                    <div class="col-md-4 ftco-animate">
+                        <div class="properties">
+                            <a href="/Property/PropertyDetail/@item.PropertyId" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(@item.ImageUrl);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <span class="@color">@item.StatusName</span>
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Property/PropertyDetail/@item.PropertyId">@item.PropertyTitle</a></h3>
+                                        <p>@item.TypeName / @item.LocationName</p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price">₺@item.Price</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="flaticon-selection"></i> @item.SquareMeter m²</span>
+                                    <span class="ml-auto"><i class="flaticon-bathtub"></i> @item.BathRooms</span>
+                                    <span><i class="flaticon-bed"></i> @item.BedRooms</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <div class="block-27">
+                        <ul>
+                            @Html.PagedListPager((IPagedList)Model, page => Url.Action("PropertyList", new { page }))
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @await Component.InvokeAsync("_LayoutNewsletterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</body>
+</html>

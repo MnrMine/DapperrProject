@@ -5,6 +5,6 @@ namespace Dapperr.Services.PropertyTypeService
 	public interface IPropertyTypeService
 	{
 		Task<List<ResultPropertyTypeDto>> GetAllTypeAsync();
-		//Task<List<GetCountPropertyType>> GetCountPropertyTypesAsync();
+		Task<List<GetCountPropertyType>> GetCountPropertyTypesAsync();
 	}
 }

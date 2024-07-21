@@ -1,0 +1,93 @@
+﻿@model Dapperr.Dtos.PropertyDto.GetByIdPropertyDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+    <div class="hero-wrap" style="background-image: url('/royalestate-master/images/bg_2.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span class="mr-2"><a href="blog.html">Emlak</a></span> <span>Emlak Detay</span></p>
+                    <h1 class="mb-3 bread">"İlan Detay"</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="single-slider owl-carousel">
+                                <div class="item">
+                                    <div class="properties-img" style="background-image: url(@Model.Images1);"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="properties-img" style="background-image: url(@Model.Images2);"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="properties-img" style="background-image: url(@Model.Images3);"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="properties-img" style="background-image: url(@Model.Images4);"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="properties-img" style="background-image: url(@Model.Images5);"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 Properties-single mt-4 mb-5 ftco-animate">
+                            <h2>@Model.PropertyTitle</h2>
+                            <p class="rate mb-4">
+                                <span class="loc"><a href="#"><i class="icon-map"></i> @Model.LocationName</a></span>
+                            </p>
+                            <p></p>
+
+                            <p>@Html.Raw(Model.Description)</p>
+                        </div>
+
+
+
+
+                        <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
+                            <h3 class="mb-4">İlan Video</h3>
+                            <div class="block-16">
+                                <figure>
+                                    <img src="@Model.ImageUrl" alt="Image placeholder" class="img-fluid">
+                                    <a href="@Model.VideoUrl" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .col-md-8 -->
+                <div class="col-lg-4 sidebar ftco-animate">
+
+                    @await Component.InvokeAsync("_CategoriesCountComponentPartial")
+
+                    @await Component.InvokeAsync("_TagCloudComponentPartial")
+
+                </div>
+            </div>
+        </div>
+    </section> <!-- .section -->
+    @await Component.InvokeAsync("_LayoutNesletterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</body>
+</html>

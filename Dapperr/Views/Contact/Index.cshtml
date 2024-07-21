@@ -1,0 +1,86 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+    <div class="hero-wrap" style="background-image: url('/royalestate-master/images/bg_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/Default/Index/">Ana Sayfa</a></span></p>
+                    <h1 class="mb-3 bread">İletişim</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="ftco-section contact-section bg-light">
+        <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-12 mb-4">
+                    <h2 class="h3">İletişim Bilgileri</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-4 d-flex">
+                    <div class="info bg-white p-4" style="text-align: center;">
+                        <p style="font-size: 12px;"><span style="font-weight: 600; font-size:15px;">Adres:</span>Sincan Cad. Ankara</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="info bg-white p-4" style="text-align: center;">
+                        <p style="font-size: 12px;"><span style="font-weight: 600; font-size:15px;">Telefon No:</span> <a href="tel:+90 552 300 30 30"> 0312 320 20 20</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="info bg-white p-4" style="text-align: center;">
+                        <p style="font-size: 12px;"><span style="font-weight: 600; font-size:15px;">Email:</span> <a href="">estate@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row block-9">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="#" class="bg-white p-5 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ad Soyad">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Konu">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mesaj"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Gönder" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6 d-flex">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Am6_-AIIjJmZQ8oPaE8HQC1qgVRywBI&ehbc=2E312F" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @await Component.InvokeAsync("_LayoutNewsletterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</body>
+</html>

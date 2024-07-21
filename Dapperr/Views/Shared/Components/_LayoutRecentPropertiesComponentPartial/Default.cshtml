@@ -1,4 +1,7 @@
-﻿@model List<Dapperr.Dtos.PropertyDto.ResultRecentPropertiesDto>
+﻿@model List<Dapperr.Dtos.PropertyDto.ResultPropertyDto>
+@{
+	string color = "";
+}
 <section class="ftco-section ftco-properties">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
@@ -12,35 +15,44 @@
     				<div class="properties-slider owl-carousel ftco-animate">
 					@foreach (var item in Model)
 					{
+						if (item.StatusName == "Satılık")
+						{
+							color = "status sale";
+						}
+						if (item.StatusName == "Kiralık")
+						{
+							color = "status rent";
+						}
 						<div class="item">
 							<div class="properties">
-								<a href="/Properties/Details/@item.PropertyId" class="img d-flex justify-content-center align-items-center" style="background-image: url(@item.ImageUrl);">
+								<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(@item.ImageUrl);">
 									<div class="icon d-flex justify-content-center align-items-center">
 										<span class="icon-search2"></span>
 									</div>
 								</a>
 								<div class="text p-3">
-									<span class="status sale">@item.Status</span>
+									<span class="@color">@item.StatusName</span>
 									<div class="d-flex">
 										<div class="one">
-											<h3><a href="/Properties/Details/@item.PropertyId">@item.Title </a></h3>
-											<p>@item.CategoryName</p>
+											<h3><a href="#">@item.PropertyTitle</a></h3>
+											<p>@item.TypeName</p>
 										</div>
 										<div class="two">
-											<span class="price">@item.Price</span>
+											<span class="price">₺@item.Price</span>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					}
-					
-	    				
-	    				
-	    				
-	    				
-	    				
-    				</div>
+
+
+
+
+
+
+
+				</div>
     			</div>
     		</div>
     	</div>

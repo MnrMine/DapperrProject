@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html lang="en">
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+	<div class="hero-wrap" style="background-image: url('/royalestate-master/images/bg_2.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-center justify-content-center">
+				<div class="col-md-9 ftco-animate text-center">
+					<p class="breadcrumbs"><span class="mr-2"><a href="/Default/Index">Anasayfa</a></span></p>
+					<h1 class="mb-3 bread">Hakkımızda</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="ftco-section ftc-no-pb">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/royalestate-master/images/about.jpg);">
+					@* <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center"> *@
+					@* 	<span class="icon-play"></span>
+					</a> *@
+				</div>
+				<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+					<div class="heading-section heading-section-wo-line mb-5 pl-md-5">
+						<div class="pl-md-5 ml-md-5">
+							<span class="subheading">
+
+							</span>
+							<h2 class="mb-4">Biz Ne Yapıyoruz?</h2>
+						</div>
+					</div>
+					<div class="pl-md-5 ml-md-5 mb-5">
+						<p></p>
+						<p>Ülkenin dört köşesine yayılan saha ekibimiz ve 200 kişiden büyük bir takımla hem emlak arayanlar hem de profesyonel ve bireysel ilan verenlerin hayatını kolaylaştıracak teknoloji çözümleri sunmak için var gücümüzle çalışıyoruz.</p>
+						<p>Global zincirlerden, kobi ölçeğindeki tüm emlak ofislerine kadar, her seviyedeki iş ortağımızın ihtiyaçlarına özel sunduğumuz üyelik paketlerimiz ve ek hizmetlerimizle sektörün her seviyesine hizmet verirken, değerimizin karşılığını fazlasıyla vermeyi amaçlıyoruz. Gelişmiş raporlama hizmetlerimiz ve Akıllı Hat servisimizle üyelerimizin işlerini değerli veri kaynaklarıyla destekliyor, iş planlamalarına katkı sağlıyoruz.</p>
+						<p><a href="#" class="btn-custom">Detaylar >> <span class="ion-ios-arrow-forward"></span></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	@await Component.InvokeAsync("_LayoutNewsletterComponentPartial")
+
+	@await Component.InvokeAsync("_LayoutFooterComponentPartial")
+
+	@await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</body>
+</html>
