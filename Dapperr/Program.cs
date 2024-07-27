@@ -1,6 +1,7 @@
 using Dapperr.Context;
 using Dapperr.Services.AgentService;
 using Dapperr.Services.CategoryService;
+using Dapperr.Services.ImagesService;
 using Dapperr.Services.LocationService;
 using Dapperr.Services.ProductService;
 using Dapperr.Services.ProductService.ProductService;
@@ -20,6 +21,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IPropertyService, PropertyService>();
+builder.Services.AddScoped<IImagesService, ImagesService>();
 builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IAgentService, AgentService>();
 builder.Services.AddScoped<ITestimonialService, TestimonialService>();
@@ -45,6 +47,14 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.MapControllerRoute(
     name: "default",

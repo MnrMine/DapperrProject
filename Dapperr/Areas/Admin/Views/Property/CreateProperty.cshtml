@@ -1,0 +1,68 @@
+﻿@model Dapperr.Dtos.PropertyDto.CreatePropertyDto
+@{
+    ViewData["Title"] = "CreateProperty";
+    Layout = "~/Areas/Admin/Views/_AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="card shadow">
+            <div class="card-header border-0">
+                <h3 class="mb-0">Yeni Emlak ekleme</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                    <tbody>
+                        <form method="post">
+                            <div class="container">
+                                <br /><br />
+                                <label>Resim Url</label>
+                                <input type="text" asp-for="ImageUrl" class="form-control" />
+                                <br />
+                                <label>Lokasyon Seçiniz</label>
+                                    @Html.DropDownListFor(x => x.LocationId, (List<SelectListItem>)ViewBag.locations, "Seçiniz...", new { @class = "form-control" })
+                                <br />
+                                <label>Fiyat</label>
+                                <input type="text" asp-for="Price" class="form-control" />
+                                <br />
+                                <label>Oda Sayısı</label>
+                                <input type="text" asp-for="BedRooms" class="form-control" />
+                                <br />
+                                <label>Banyo Sayısı</label>
+                                <input type="text" asp-for="BathRooms" class="form-control" />
+                                <br />
+                                <label>Isınma Türü</label>
+                                <input type="text" asp-for="Heating" class="form-control" />
+                                <br />
+                                <label>Tarih</label>
+                                <input type="text" asp-for="Date" class="form-control" />
+                                <br />
+                                <label>Açıklama</label>
+                                <textarea rows="10" class="form-control" id="myeditor" asp-for="Desciption"></textarea>
+                                <br />
+                                <br />
+                                <label>Emlak Türü Seçiniz</label>
+                                    @Html.DropDownListFor(x => x.TypeId, (List<SelectListItem>)ViewBag.types, "Seçiniz...", new { @class = "form-control" })
+                                <br />
+                                <label>Emlak Durumu Seçiniz</label>
+                                    @Html.DropDownListFor(x => x.StatusId, (List<SelectListItem>)ViewBag.status, "Seçiniz...", new { @class = "form-control" })
+                                <br />
+                                <label>Danışman  Seçiniz</label>
+                                    @Html.DropDownListFor(x => x.AgentId, (List<SelectListItem>)ViewBag.agents, "Seçiniz...", new { @class = "form-control" })
+                                <br />
+                                <label> Etiket Seçiniz</label>
+                                    @Html.DropDownListFor(x => x.TagId, (List<SelectListItem>)ViewBag.tags, "Seçiniz...", new { @class = "form-control" })
+                                <br />
+                                
+                                <button type="submit" class="btn btn-primary">Emlak Ekle</button>
+                                <br /><br />
+                            </div>
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -14,7 +14,7 @@ namespace Dapperr.Services.StatusService
 		}
 		public async Task<List<ResultStatusDto>> GetAllStatusAsync()
 		{
-			string query = "Select * From TblPropertyStatus";
+			string query = "Select * From TblStatus";
 			var connection = _context.CreateConnection();
 			var values = await connection.QueryAsync<ResultStatusDto>(query);
 			return values.ToList();

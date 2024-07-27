@@ -23,7 +23,7 @@ namespace Dapperr.Services.PropertyTypeService
 
         public async Task<List<GetCountPropertyType>> GetCountPropertyTypesAsync()
         {
-            string query = "Select Count(*)  as 'CategoryCount',TypeName,TypeId From TblProperty INNER Join TblPropertyType On TblPropertyType.TypeId = TblProperty.TypeId  Group By TypeName,TypeId";
+            string query = "Select Count(*)  as 'CategoryCount',TypeName,TypeId From TblProperty INNER Join TblPropertyType On TblPropertyType.TypeId = TblProperty.Type_Id  Group By TypeName,TypeId";
             var connection = _context.CreateConnection();
             var values = await connection.QueryAsync<GetCountPropertyType>(query);
             return values.ToList();

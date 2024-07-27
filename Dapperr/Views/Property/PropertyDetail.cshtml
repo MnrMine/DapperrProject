@@ -66,8 +66,9 @@
                             <h3 class="mb-4">İlan Video</h3>
                             <div class="block-16">
                                 <figure>
-                                    <img src="@Model.ImageUrl" alt="Image placeholder" class="img-fluid">
-                                    <a href="@Model.VideoUrl" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                                   @*  <img src="@Model.ImageUrl" alt="Image placeholder" class="img-fluid"> *@
+                                    <iframe width="560" height="315" src="@Model.VideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                   @*  <a href="@Model.VideoUrl" class="play-button popup-vimeo"><span class="icon-play"></span></a> *@
                                 </figure>
                             </div>
                         </div>
@@ -83,7 +84,7 @@
             </div>
         </div>
     </section> <!-- .section -->
-    @await Component.InvokeAsync("_LayoutNesletterComponentPartial")
+    @await Component.InvokeAsync("_LayoutNewsletterComponentPartial")
 
     @await Component.InvokeAsync("_LayoutFooterComponentPartial")
 
