@@ -29,6 +29,9 @@ Proje, ASP.NET Framework, SQL , MVC, CSS ve HTML kullanılarak geliştirilmiş b
  ![UI_istatistik](https://github.com/user-attachments/assets/d67c1306-59b0-4959-9f3d-fbffd55da06e)
  # Tüm İlan Listesi
  ![UI_EmlakListesi](https://github.com/user-attachments/assets/5c463cf6-4ddc-44ab-adeb-aebc872f0dcd)
+  # İletişim
+  ![UI_İletişim](https://github.com/user-attachments/assets/38d9239a-81c0-4b80-bb12-2c48ed0f36d7)
+
  # İlan Detay
 ![UI_EmlakDetay1](https://github.com/user-attachments/assets/d93d35b3-d8d0-4063-b492-2e9e965d7cb7)
 
