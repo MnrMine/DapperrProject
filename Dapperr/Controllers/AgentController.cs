@@ -10,6 +10,7 @@ namespace Dapperr.Controllers
 		public AgentController(IAgentService agentService)
 		{
 			_agentService = agentService;
+
 		}
 
 		public async Task<IActionResult> AgentList()
